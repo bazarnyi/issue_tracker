@@ -5,6 +5,10 @@ class IssuesController < ApplicationController
     @issues = policy_scope(Issue)
   end
 
+  def show
+    @issue = Issue.find(params[:id])
+  end
+
   def destroy
     authorize Issue
 
