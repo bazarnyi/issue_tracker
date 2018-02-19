@@ -1,0 +1,12 @@
+<h1>Create issue</h1>
+
+<%= form_for @issue do |f| %>
+  Title: <%= f.text_field :title %>
+  <%= @issue.errors[:title].join(',') %><br />
+
+  Description: <%= f.text_area :description %><br />
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back to Issues', root_path %>
