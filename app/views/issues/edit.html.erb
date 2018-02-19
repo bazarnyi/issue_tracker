@@ -1,0 +1,11 @@
+<h1>Edit issue</h1>
+
+<%= form_for @issue do |f| %>
+  Title: <%= @issue.title %><br />
+  Description: <%= @issue.description %><br />
+  State: <%= f.select :state, Issue.states.keys.to_a %><br />
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back to Issues', root_path %>
